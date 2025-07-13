@@ -6,15 +6,24 @@
 
 /*Default styles*/ 
 
+body { 
+    position: relative;
+    max-height: 100vh !important;
+}
 
 /*Nav styles start*/
 #main-nav {  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: grid; 
     grid-template-columns: 1fr 4fr 2fr;
     padding: 3em 40px; 
     gap: 5px;  
     background: #020024;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 213, 255) 100%);
 } 
 
 #main-nav > article {  
@@ -50,18 +59,38 @@
     list-style: none;
 } 
 
-#links .link a{ 
+#links .link a { 
     text-decoration: none !important; 
     color: rgb(255, 255, 255);
     font-size: 1.2em;
     font-weight: 600;
     font-family: 'Courier New', Courier, monospace;
+}    
 
-}  
+#links .link a:hover { 
+   border-bottom: 2px solid rgba(232, 7, 7, 0.866); 
+   padding-bottom: 8px;
+   transition: .2s all ease-in-out;
+}
+
+.fa-brands { 
+    transform: scale(1.5);
+} 
+
+.social-media-link a i:hover {
+  background: linear-gradient(90deg, rgb(0, 213, 255), rgb(0, 119, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-media-link a i:hover {
+  transform: scale(1.8);
+}
 
 #search-container { 
     margin-left: auto !important;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(232, 7, 7, 0.866);
     padding: 0 20px; 
     border-radius: 25px;
 } 
@@ -71,7 +100,7 @@
     outline: none; 
     stroke: none; 
     background-color: rgba(255, 255, 255, 0); 
-    color: rgb(232, 7, 7);
+    color: rgb(255, 255, 255);
     margin-right: 15px;
 } 
 
@@ -86,14 +115,14 @@
     stroke: none; 
     border: none; 
     background-color: rgba(255, 255, 255, 0); 
-    color: rgb(9, 9, 224) !important; 
+    color: rgb(255, 255, 255) !important; 
     font-size: 1em;
     font-weight: 600;
     font-family: 'Courier New', Courier, monospace;
 }  
 
 #search-input::placeholder { 
-    color: rgb(134, 13, 13); 
+    color: rgb(255, 255, 255); 
     opacity: 1;
 }
 
@@ -101,10 +130,142 @@
 /*Nav styles end*/  
 
 /*main-section*/
-#main-section { 
-       padding: 3em 40px; 
+#main-section, #about-page { 
+    padding: 0 40px; 
+    background-image: url('public/tom-podmore-3mEK924ZuTs-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    min-height: 100vh;
+}
+
+#hero-section { 
+    display: grid; 
+    grid-template-columns: 10% 90%;
+    align-items: start;
+    background-color: rgba(0, 0, 0, 0);
+    min-height: 100vh;
+    height: 100% !important;
+} 
+
+#hero-section article { 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    height: 100%;
+} 
+
+#social-media-links-container { 
+    padding-top: 15vh;
+    align-items: start;
+} 
+
+.vertical-line { 
+    min-height: 60%;
+    width: 4px;
+    background-color: #f6f6f6;
+} 
+
+#social-media-links ul { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5vh 0;
+    height: 100%;
+    list-style: none;
+}  
+
+
+#social-media-links ul li a i { 
+    color: white;
+}
+
+#hero-content-wrapper {  
+    padding-top: 20vh;
+    padding-right: 20vw;
+    align-items: start;
+    justify-content: start !important;
+} 
+
+h1 { 
+    font-size: 8em;
+    margin-bottom: 5vh;
+    color:  rgb(222, 20, 20);
+   -webkit-text-stroke: 1px rgba(233, 219, 219, 0.751); 
+} 
+
+#hero-content-wrapper p { 
+    font-size: xx-large;
+    margin-bottom: 3vh; 
+    color: rgb(255, 255, 255);
+    background-color: #00000034;
+} 
+
+#hero-content-wrapper a { 
+    border-radius: 3px;
+    text-decoration: none;  
+    color: #e9e8ef;
+    font-size: xx-large; 
+    background: #ffffff76; 
+    padding: .8em 2em ;
+    background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 213, 255) 100%);
+    font-weight: 900;
 }
 
 /*Hero section styles start*/  
 
+
+/*About section*/
+#company-team {  
+    display: flex;  
+    flex-direction: column; 
+    align-items: start; 
+    justify-content: start !important;
+    background: #020024;
+    background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 213, 255) 100%); 
+    width: 130%;
+    margin-bottom: 6vh !important;
+    padding: 2em;
+} 
+
+#company-team h3 {   
+    font-size: 2.5em;
+    color:  rgb(255, 255, 255);
+    margin-bottom: 2vh;
+} 
+
+#profiles ul { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    align-items: center;
+    justify-content: start;
+    gap: 2em; 
+    list-style: none;
+    color: white;
+}   
+
+#profiles ul li { 
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    text-align:left;
+}
+
+#profiles ul li img { 
+    display: block;
+    margin-bottom: 1.1em;
+}
+
+#profiles ul li p { 
+    font-size: 1.2em;
+    margin-bottom: 1.2em 0;
+    background-color: #00000000; 
+    padding: 0;
+} 
+
+.position  { 
+    background-color: rgb(222, 20, 20); 
+    padding: 0.8em 1.2em ;
+}
 

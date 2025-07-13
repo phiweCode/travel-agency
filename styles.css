@@ -1,0 +1,110 @@
+*,*::after,*::before { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+} 
+
+/*Default styles*/ 
+
+
+/*Nav styles start*/
+#main-nav {  
+    display: grid; 
+    grid-template-columns: 1fr 4fr 2fr;
+    padding: 3em 40px; 
+    gap: 5px;  
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+} 
+
+#main-nav > article {  
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}   
+
+#logo-wrapper{ 
+    display: grid; 
+    grid-template-columns: 4fr 1fr; 
+    width: 100%;
+    gap: 2vw;
+}
+
+#logo-wrapper span { 
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.fa-plane-departure  { 
+    transform: scale(3); 
+    color: rgb(255, 255, 255); 
+} 
+
+#links { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-evenly; 
+    width: 60%; 
+    list-style: none;
+} 
+
+#links .link a{ 
+    text-decoration: none !important; 
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+
+}  
+
+#search-container { 
+    margin-left: auto !important;
+    background-color: rgb(255, 255, 255);
+    padding: 0 20px; 
+    border-radius: 25px;
+} 
+
+#search-container > form > button  { 
+    border: none; 
+    outline: none; 
+    stroke: none; 
+    background-color: rgba(255, 255, 255, 0); 
+    color: rgb(232, 7, 7);
+    margin-right: 15px;
+} 
+
+#search-container > form > button > i  { 
+  transform: scale(1.2);
+}
+#search-input { 
+    width: fit-content !important; 
+    min-width: 400px; 
+    padding: 10px 1vw; 
+    outline: none;
+    stroke: none; 
+    border: none; 
+    background-color: rgba(255, 255, 255, 0); 
+    color: rgb(9, 9, 224) !important; 
+    font-size: 1em;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}  
+
+#search-input::placeholder { 
+    color: rgb(134, 13, 13); 
+    opacity: 1;
+}
+
+
+/*Nav styles end*/  
+
+/*main-section*/
+#main-section { 
+       padding: 3em 40px; 
+}
+
+/*Hero section styles start*/  
+
+

@@ -7,8 +7,8 @@
 /*Default styles*/ 
 
 body { 
+    max-height: 100vh;
     position: relative;
-    max-height: 100vh !important;
 }
 
 /*Nav styles start*/
@@ -226,10 +226,14 @@ h1 {
     width: 130%;
     margin-bottom: 6vh !important;
     padding: 2em;
-} 
+}  
+
+.about-description { 
+    font-size: x-large !important;
+}
 
 #company-team h3 {   
-    font-size: 2.5em;
+    font-size: 2em;
     color:  rgb(255, 255, 255);
     margin-bottom: 2vh;
 } 
@@ -267,5 +271,150 @@ h1 {
 .position  { 
     background-color: rgb(222, 20, 20); 
     padding: 0.8em 1.2em ;
+    border-radius: 5px;
 }
 
+
+#contact-form {  
+    display: flex; 
+    flex-direction: column;   
+    align-items: start;
+    width: 100%; 
+    padding: 2% 5%;
+    background-color: rgba(0, 0, 0, 0.24);
+}   
+
+.contact-us-header { 
+    font-size: 7em;
+    margin: 0;
+}
+
+#contact-form label { 
+    font-size: x-large; 
+    font-weight: 900; 
+    font-family: 'Courier New', Courier, monospace; 
+    color: white;
+}
+
+#contact-form input, #contact-form textarea { 
+    margin-bottom: 2em;  
+    min-height: 2vh;
+    width: 100%;
+    background-color: #00000000;
+    border: 2px solid #ffffff; 
+    font-size: x-large; 
+    font-weight: 900; 
+    font-family: 'Courier New', Courier, monospace; 
+    color: white;
+}  
+
+#contact-form textarea  { 
+    height: 20vh !important;
+}
+
+#contact-form button { 
+    font-size: x-large; 
+    font-weight: 900; 
+    font-family: 'Courier New', Courier, monospace; 
+    color: white;
+    background-color: rgb(222, 20, 20); 
+    padding: .6em; 
+    border-radius: 5px;
+}  
+
+
+#search-recommendations { 
+   display: flex; 
+   flex-direction: column; 
+   align-items: start;
+   justify-content: space-between;
+   top: 14vh; 
+   right: 10vw;
+   position: absolute;
+   background-color: rgba(38, 38, 196, 0) ; 
+   height: 86vh;
+   width: 40% !important;
+   padding: 0 2em; 
+   padding-top: 1vh;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   z-index: 10;
+} 
+
+.recommendation {  
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    min-height: 40vh; 
+    background-color: white; 
+    width: 100%;
+    margin-bottom: 2VH;
+    z-index: 1000000; 
+    background: #020024;
+    background: rgb(234, 56, 56);
+} 
+
+.recom-image { 
+    min-height: 60%;
+    margin-bottom: 2vh;
+} 
+
+.recommendation-name { 
+    color: white; 
+    font-size: xx-large;
+    padding-left: 4%;
+} 
+
+.recommendation-description { 
+    font-size: large; 
+    color: white;
+    padding-left: 5%;
+    padding-right: 2%;
+} 
+
+.recom-btn {  
+    position: absolute;
+    border: none; 
+    padding: .2em 2em;
+    margin: right !important; 
+    width: 100%;
+    bottom: 0;
+    font-size: large; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: bolder; 
+    color: white;
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.455) 0%, rgba(9, 9, 121, 0.373) 35%, rgb(0, 213, 255) 100%);
+}
+
+.hide-recoms {  
+    display: none !important;
+}
+
+.show-recom { 
+    display: none;
+} 
+
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}

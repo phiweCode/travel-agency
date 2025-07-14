@@ -106,29 +106,56 @@ async function findRecommendation (inputString=""){
 
 
     const recommendationsList = document.querySelectorAll('.recommendation'); 
-    console.log("recoms", recommendationsList) 
+ //   console.log("recoms", recommendationsList) 
 
     recommendationsList.forEach(recom=>{ 
         const [name, paragraph] = recom.querySelectorAll('.recommendation-name, p') 
-        console.log("Name: ", name, '\n', "paragraph: ", paragraph) 
+       // console.log("Name: ", name, '\n', "paragraph: ", paragraph) 
 
         let count = 0;
         words.forEach(word => {
-            if (name.toLowerCase().includes(word)) count++;
-            if (paragraph.toLowerCase().includes(word)) count++;
+            if (name.textContent.toLowerCase().includes(word)) count++;
+            if (paragraph.textContent.toLowerCase().includes(word)) count++;
         });  
 
-        
+        // console.log("Score: ", count, '\n', "recom:", recom)  
 
+        recommendations.push({score: count, destination: recom})
+    })
+
+
+    const filteredDest = recommendations.filter(dest=> dest.score !== 0).sort((a,b)=>a.score - b.score).map(elem=>elem.destination)
+
+    recommendationsList.forEach(recom=>{  
+        console.log("Check", filteredDest.includes(recom))
+        if(filteredDest.includes(recom)) recom.style.display = 'flex'; 
+        else recom.style.display = 'none'
     })
 
 
 
+    
 
     return words
-}   
-
-findRecommendation()
+}    
 
 
+
+//findRecommendation("beach") 
+
+const searchForm = document.getElementById("search-form");
+
+
+searchForm.addEventListener('submit', (e)=>{ 
+
+     e.preventDefault(); // stop the page from reloading
+
+  const formData = new FormData(searchForm);
+
+  // Get specific field
+  const searchValue = formData.get('search');
+  console.log('Submitted:', searchValue); 
+
+  findRecommendation(searchValue)
+})
 
